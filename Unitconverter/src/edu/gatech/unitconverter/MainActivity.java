@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 
+
+
 public class MainActivity extends Activity {
 
 	@Override
@@ -25,13 +27,30 @@ public class MainActivity extends Activity {
 		double miles = km / 1.609;
 		return String.valueOf(miles);
 	}
-
+	
+	public static boolean isNumeric(String str)  
+	{  
+	  try  
+	  {  
+	    double d = Double.parseDouble(str);  
+	  }  
+	  catch(NumberFormatException nfe)  
+	  {  
+	    return false;  
+	  }  
+	  return true;  
+	}
+	
 	public void handleClick(View view) {
 		boolean checked = ((RadioButton) view).isChecked();
 		
 		EditText txt = (EditText) findViewById(R.id.distField);
+		String txtString = txt.getText().toString();
+		if (!isNumeric(txtString)){
+			txtString = "0";
+		}
 		
-		double distance = Double.parseDouble(txt.getText().toString());
+		double distance = Double.parseDouble(txtString);
 		
 		switch(view.getId()) {
 		

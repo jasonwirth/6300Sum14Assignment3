@@ -22,6 +22,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="edu.gatech.unitconverter.DistanceActivity"
+            android:label="@string/title_activity_distance" >
+        </activity>
+        <activity
+            android:name="edu.gatech.unitconverter.WeightActivity"
+            android:label="@string/title_activity_weight" >
+        </activity>
+        <activity
+            android:name="edu.gatech.unitconverter.TemperatureActivity"
+            android:label="@string/title_activity_temperature" >
+        </activity>
     </application>
 
 </manifest>
