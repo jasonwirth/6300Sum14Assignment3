@@ -25,7 +25,7 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int distActBtn=0x7f070005;
+        public static final int distActBtn=0x7f070006;
         public static final int distanceField=0x7f070000;
         public static final int radioCelsius=0x7f07000c;
         public static final int radioFahrenheit=0x7f07000b;
@@ -38,7 +38,7 @@ public final class R {
         public static final int temperatureField=0x7f07000a;
         public static final int textDistance=0x7f070001;
         public static final int textTemperature=0x7f070009;
-        public static final int textView1=0x7f070006;
+        public static final int textView1=0x7f070005;
         public static final int textWeight=0x7f07000d;
         public static final int weightActBtn=0x7f070007;
         public static final int weightField=0x7f07000e;
