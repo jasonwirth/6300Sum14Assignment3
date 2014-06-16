@@ -30,10 +30,21 @@ public class TemperatureActivity extends Activity {
 		boolean checked = ((RadioButton) view).isChecked();
 		
 		EditText txt = (EditText) findViewById(R.id.temperatureField);
-	
 		
-		double temp = Double.parseDouble(txt.getText().toString());
+		double temp = Numeric.numeric(txt.getText().toString(), 0.0);
 		
+		switch(view.getId()) {
+		
+		case R.id.radioFahrenheit:
+			if (checked)
+				txt.setText(fahrenheitToCelsius(temp));
+			break;
+			
+		case R.id.radioCelsius:
+			if (checked)
+				txt.setText(celsiusToFahrenheit(temp));
+			break;
+		}
 	}
 	
 }

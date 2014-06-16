@@ -32,7 +32,7 @@ public class WeightActivity extends Activity {
 		
 		EditText text = (EditText) findViewById(R.id.weightField);
 		
-		double weight = Double.parseDouble(text.getText().toString());
+		double weight = Numeric.numeric(text.getText().toString(), 0.0);
 		
 		switch(view.getId()) {
 		case R.id.radioKg:
