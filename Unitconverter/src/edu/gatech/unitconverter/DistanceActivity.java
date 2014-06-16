@@ -29,7 +29,7 @@ public class DistanceActivity extends Activity {
 	public void handleClick(View view) {
 		boolean checked = ((RadioButton) view).isChecked();
 		
-		EditText txt = (EditText) findViewById(R.id.distField);
+		EditText txt = (EditText) findViewById(R.id.distanceField);
 		
 		double distance = Numeric.numeric(txt.getText().toString(), 0.0);
 		

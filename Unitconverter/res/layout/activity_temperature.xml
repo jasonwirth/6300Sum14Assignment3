@@ -45,34 +45,5 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="numberDecimal" />
-
-        <Button
-        android:id="@+id/distActBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_marginBottom="121dp"
-        android:layout_marginRight="17dp"
-        android:text="Distance" />
-
-    <Button
-        android:id="@+id/weightActBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/distActBtn"
-        android:layout_alignBottom="@+id/distActBtn"
-        android:layout_toRightOf="@+id/distActBtn"
-        android:text="Weight" />
-
-    <Button
-        android:id="@+id/tempActBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/weightActBtn"
-        android:layout_alignBottom="@+id/weightActBtn"
-        android:layout_marginLeft="19dp"
-        android:layout_toRightOf="@+id/weightActBtn"
-        android:text="Temp." />
     
 </RelativeLayout>
