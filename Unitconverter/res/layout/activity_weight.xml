@@ -23,7 +23,7 @@
         android:ems="10" />
 
     <RadioGroup
-        android:id="@+id/radioGroup1"
+        android:id="@+id/groupWeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/weightField"
@@ -35,12 +35,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
+            android:onClick="handleClick"
             android:text="Pounds" />
 
         <RadioButton
             android:id="@+id/radioKg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="handleClick"
             android:text="Kg" />
     </RadioGroup>
     

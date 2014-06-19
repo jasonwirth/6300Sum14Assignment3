@@ -17,6 +17,7 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		System.out.println("Starting UnitConverter app");
 		setContentView(R.layout.activity_main);
 		
 		Button distanceButton = (Button)findViewById(R.id.distActBtn);

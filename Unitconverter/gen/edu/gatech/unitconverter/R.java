@@ -27,21 +27,23 @@ public final class R {
     public static final class id {
         public static final int distActBtn=0x7f070006;
         public static final int distanceField=0x7f070000;
-        public static final int radioCelsius=0x7f07000c;
-        public static final int radioFahrenheit=0x7f07000b;
-        public static final int radioGroup1=0x7f070002;
-        public static final int radioKg=0x7f070010;
+        public static final int groupDistance=0x7f070002;
+        public static final int groupTemperature=0x7f07000a;
+        public static final int groupWeight=0x7f070010;
+        public static final int radioCelsius=0x7f07000d;
+        public static final int radioFahrenheit=0x7f07000c;
+        public static final int radioKg=0x7f070012;
         public static final int radioKm=0x7f070004;
-        public static final int radioLbs=0x7f07000f;
+        public static final int radioLbs=0x7f070011;
         public static final int radioMiles=0x7f070003;
         public static final int tempActBtn=0x7f070008;
-        public static final int temperatureField=0x7f07000a;
+        public static final int temperatureField=0x7f07000b;
         public static final int textDistance=0x7f070001;
         public static final int textTemperature=0x7f070009;
         public static final int textView1=0x7f070005;
-        public static final int textWeight=0x7f07000d;
+        public static final int textWeight=0x7f07000e;
         public static final int weightActBtn=0x7f070007;
-        public static final int weightField=0x7f07000e;
+        public static final int weightField=0x7f07000f;
     }
     public static final class layout {
         public static final int activity_distance=0x7f030000;

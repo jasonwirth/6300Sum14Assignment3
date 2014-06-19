@@ -15,7 +15,7 @@
         android:text="Temperature" />
 
     <RadioGroup
-        android:id="@+id/radioGroup1"
+        android:id="@+id/groupTemperature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/temperatureField"
@@ -27,12 +27,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
+            android:onClick="handleClick"
             android:text="Fahrenheit" />
 
         <RadioButton
             android:id="@+id/radioCelsius"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="handleClick"
             android:text="Celsius" />
     </RadioGroup>
 

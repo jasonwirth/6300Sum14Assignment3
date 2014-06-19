@@ -17,12 +17,12 @@ public class TemperatureActivity extends Activity {
 	}
 
 	public String fahrenheitToCelsius(double f) {
-		double c = (f - 32) * 5/9.;
+		double c = (f - 32) * 5 / 9;
 		return String.valueOf(c);
 	}
 	
 	public String celsiusToFahrenheit(double c) {
-		double f = c * 5./9 + 32;
+		double f = (c * 9/5) + 32;
 		return String.valueOf(f);
 	}
 	
@@ -37,12 +37,12 @@ public class TemperatureActivity extends Activity {
 		
 		case R.id.radioFahrenheit:
 			if (checked)
-				txt.setText(fahrenheitToCelsius(temp));
+				txt.setText(celsiusToFahrenheit(temp));
 			break;
 			
 		case R.id.radioCelsius:
 			if (checked)
-				txt.setText(celsiusToFahrenheit(temp));
+				txt.setText(fahrenheitToCelsius(temp));
 			break;
 		}
 	}

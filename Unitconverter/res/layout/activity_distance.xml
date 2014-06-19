@@ -27,7 +27,7 @@
         android:text="Distance" />
 
     <RadioGroup
-        android:id="@+id/radioGroup1"
+        android:id="@+id/groupDistance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/distanceField"
@@ -39,12 +39,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
+            android:onClick="handleClick"
             android:text="Miles" />
 
         <RadioButton
             android:id="@+id/radioKm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="handleClick"
             android:text="Kilometers" />
     </RadioGroup> 
     
