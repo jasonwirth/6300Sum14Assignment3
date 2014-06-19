@@ -14,14 +14,6 @@
         android:layout_marginTop="34dp"
         android:text="Weight" />
 
-    <EditText
-        android:id="@+id/weightField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="70dp"
-        android:ems="10" />
-
     <RadioGroup
         android:id="@+id/groupWeight"
         android:layout_width="wrap_content"
@@ -45,6 +37,17 @@
             android:onClick="handleClick"
             android:text="Kg" />
     </RadioGroup>
-    
+
+    <EditText
+        android:id="@+id/weightField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textWeight"
+        android:layout_below="@+id/textWeight"
+        android:layout_marginTop="18dp"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
 
 </RelativeLayout>

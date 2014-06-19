@@ -2,45 +2,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
     tools:context="${packageName}.${activityClass}" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="63dp"
-        android:text="Welcome" />
-
-    <Button
-        android:id="@+id/distActBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_marginBottom="121dp"
-        android:layout_marginRight="17dp"
-        android:text="Distance" />
-
-    <Button
-        android:id="@+id/weightActBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/distActBtn"
-        android:layout_alignBottom="@+id/distActBtn"
-        android:layout_toRightOf="@+id/distActBtn"
-        android:text="Weight" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="44dp"
+        android:text="Unit Converter"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
         android:id="@+id/tempActBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/weightActBtn"
-        android:layout_alignBottom="@+id/weightActBtn"
-        android:layout_marginLeft="19dp"
-        android:layout_toRightOf="@+id/weightActBtn"
+        android:layout_below="@+id/weightActBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
         android:text="Temp." />
+
+    <Button
+        android:id="@+id/weightActBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="Weight" />
+
+    <Button
+        android:id="@+id/distActBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/weightActBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="30dp"
+        android:text="Distance" />
 
 </RelativeLayout>

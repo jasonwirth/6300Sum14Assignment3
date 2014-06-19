@@ -2,8 +2,6 @@ package edu.gatech.unitconverter;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -21,12 +19,11 @@ public class TemperatureActivity extends Activity {
 
 		// Set the default text value
         text = (EditText) findViewById(R.id.temperatureField);
-        text.setText("0");
+        text.setText("0.0");
 		
 		// Print the text of the currently selected radio button
 		RadioGroup radioGroup = (RadioGroup) findViewById(R.id.groupTemperature);
 		checkedId = radioGroup.getCheckedRadioButtonId();
-		System.out.println("Current checkedId: " + checkedId);
 	}
 
 	public void handleClick(View view){
@@ -35,7 +32,6 @@ public class TemperatureActivity extends Activity {
 		double temp = Numeric.numeric(text.getText().toString(), 0.0);
 		
 		Integer current_checkedId = view.getId();
-		System.out.println("checkedId:" + checkedId + " currentId:" + current_checkedId );
 		
 		switch(current_checkedId) {
 		
