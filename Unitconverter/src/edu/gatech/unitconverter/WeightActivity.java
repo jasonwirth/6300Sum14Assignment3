@@ -35,12 +35,12 @@ public class WeightActivity extends Activity {
 		switch(current_checkedId) {
 		case R.id.radioKg:
 			if (checked && !checkedId.equals(current_checkedId))
-				text.setText(Numeric.poundsToKg(weight));
+				text.setText(Numeric.kgToPounds(weight));
 				checkedId = current_checkedId;
 			break;
 		case R.id.radioLbs:
 			if (checked && !checkedId.equals(current_checkedId))
-				text.setText(Numeric.kgToPounds(weight));
+				text.setText(Numeric.poundsToKg(weight));
 				checkedId = current_checkedId;
 			break;
 		}
