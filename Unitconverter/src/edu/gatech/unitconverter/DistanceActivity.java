@@ -18,7 +18,8 @@ public class DistanceActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_distance);
 		System.out.println("Starting DistanceActivity Tadaima");
-		
+	
+		// store the checked value to test when we toggle
 		RadioGroup radioGroup = (RadioGroup) findViewById(R.id.groupDistance);
 		checkedId = radioGroup.getCheckedRadioButtonId();
 	}
