@@ -11,6 +11,8 @@ import android.widget.RadioGroup;
 
 public class TemperatureActivity extends Activity {
 
+	private Integer checkedId = 0;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -18,8 +20,7 @@ public class TemperatureActivity extends Activity {
 		
 		// Print the text of the currently selected radio button
 		RadioGroup radioGroup = (RadioGroup) findViewById(R.id.groupTemperature);
-		int checkedId = radioGroup.getCheckedRadioButtonId();
-		RadioButton currentButton = (RadioButton) findViewById(checkedId);
+		checkedId = radioGroup.getCheckedRadioButtonId();
 		System.out.println("Current checkedId: " + checkedId);
 	}
 
@@ -40,16 +41,21 @@ public class TemperatureActivity extends Activity {
 		
 		double temp = Numeric.numeric(txt.getText().toString(), 0.0);
 		
+		Integer current_checkedId = view.getId();
+		System.out.println("checkedId:" + checkedId + " currentId:" + current_checkedId );
+		
 		switch(view.getId()) {
 		
 		case R.id.radioFahrenheit:
-			if (checked)
+			if (checked && !current_checkedId.equals(checkedId))
 				txt.setText(celsiusToFahrenheit(temp));
+				checkedId = current_checkedId;
 			break;
 			
 		case R.id.radioCelsius:
-			if (checked)
+			if (checked && !current_checkedId.equals(checkedId))
 				txt.setText(fahrenheitToCelsius(temp));
+				checkedId = current_checkedId;
 			break;
 		}
 	}
