@@ -39,9 +39,9 @@ public class MainActivity extends Activity {
 			}
 		}); 
 		
-		Button tempButton = (Button)findViewById(R.id.tempActBtn);
+		Button temperatureButton = (Button)findViewById(R.id.tempActBtn);
 	
-		tempButton.setOnClickListener(new OnClickListener () {
+		temperatureButton.setOnClickListener(new OnClickListener () {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(getApplicationContext(), TemperatureActivity.class);
