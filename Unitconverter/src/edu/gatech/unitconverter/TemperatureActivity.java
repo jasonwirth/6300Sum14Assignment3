@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 public class TemperatureActivity extends Activity {
 
@@ -14,6 +15,12 @@ public class TemperatureActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_temperature);
+		
+		// Print the text of the currently selected radio button
+		RadioGroup radioGroup = (RadioGroup) findViewById(R.id.groupTemperature);
+		int checkedId = radioGroup.getCheckedRadioButtonId();
+		RadioButton currentButton = (RadioButton) findViewById(checkedId);
+		System.out.println("Current checkedId: " + checkedId);
 	}
 
 	public String fahrenheitToCelsius(double f) {
