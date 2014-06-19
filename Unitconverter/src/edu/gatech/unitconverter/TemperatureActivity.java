@@ -44,7 +44,7 @@ public class TemperatureActivity extends Activity {
 		Integer current_checkedId = view.getId();
 		System.out.println("checkedId:" + checkedId + " currentId:" + current_checkedId );
 		
-		switch(view.getId()) {
+		switch(current_checkedId) {
 		
 		case R.id.radioFahrenheit:
 			if (checked && !current_checkedId.equals(checkedId))

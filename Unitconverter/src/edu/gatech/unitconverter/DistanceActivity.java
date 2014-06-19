@@ -10,6 +10,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 public class DistanceActivity extends Activity {
+	
+	private Integer checkedId;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +19,8 @@ public class DistanceActivity extends Activity {
 		setContentView(R.layout.activity_distance);
 		System.out.println("Starting DistanceActivity Tadaima");
 		
+		RadioGroup radioGroup = (RadioGroup) findViewById(R.id.groupDistance);
+		checkedId = radioGroup.getCheckedRadioButtonId();
 	}
 	
     public void handleClick(View view) {
@@ -25,16 +29,18 @@ public class DistanceActivity extends Activity {
         EditText txt = (EditText) findViewById(R.id.distanceField);
         
         double distance = Numeric.numeric(txt.getText().toString(), 0.0);
-        
-        switch(view.getId()) {
+        Integer current_checkedId = view.getId();
+        switch(current_checkedId) {
         
         case R.id.radioMiles:
-                if(checked)
-                        txt.setText(kmToMiles(distance));
+                if(checked && !checkedId.equals(current_checkedId))
+                    txt.setText(kmToMiles(distance));
+            		checkedId = current_checkedId;	
                 break;
         case R.id.radioKm:
-                if(checked)
-                        txt.setText(milesToKm(distance));
+                if(checked && !checkedId.equals(current_checkedId))
+                    txt.setText(milesToKm(distance));
+            		checkedId = current_checkedId;	
                 break;	
         }
     }
