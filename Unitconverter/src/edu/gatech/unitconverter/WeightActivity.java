@@ -12,11 +12,16 @@ import android.widget.RadioGroup;
 public class WeightActivity extends Activity {
 	
 	private Integer checkedId;
+	private EditText text;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_weight);
+
+		// Set the default text value
+        text = (EditText) findViewById(R.id.weightField);
+        text.setText("0.0");
 		
 		// Get the current radio button to test when we toggle
 		RadioGroup radioGroup = (RadioGroup) findViewById(R.id.groupWeight);
@@ -25,8 +30,6 @@ public class WeightActivity extends Activity {
 	
 	public void handleClick(View view) {
 		boolean checked = ((RadioButton) view).isChecked();
-		
-		EditText text = (EditText) findViewById(R.id.weightField);
 		
 		double weight = Numeric.numeric(text.getText().toString(), 0.0);
 		
