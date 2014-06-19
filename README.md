@@ -14,6 +14,6 @@ From the home screen select a unit to convert:
 
 Enter the value and chose the conversion.
 
-
+Press the back button to return home and choose another conversion.
 
 
