@@ -23,16 +23,6 @@ public class WeightActivity extends Activity {
 		checkedId = radioGroup.getCheckedRadioButtonId();
 	}
 	
-	public String poundsToKg(double lbs) {
-		double kg = lbs * 2.2;
-		return String.valueOf(kg);
-	}
-	
-	public String kgToPounds(double kg){
-		double pounds = kg / 2.2;
-		return String.valueOf(pounds);
-	}
-	
 	public void handleClick(View view) {
 		boolean checked = ((RadioButton) view).isChecked();
 		
@@ -44,12 +34,12 @@ public class WeightActivity extends Activity {
 		switch(current_checkedId) {
 		case R.id.radioKg:
 			if (checked && !checkedId.equals(current_checkedId))
-				text.setText(poundsToKg(weight));
+				text.setText(Numeric.poundsToKg(weight));
 				checkedId = current_checkedId;
 			break;
 		case R.id.radioLbs:
 			if (checked && !checkedId.equals(current_checkedId))
-				text.setText(kgToPounds(weight));
+				text.setText(Numeric.kgToPounds(weight));
 				checkedId = current_checkedId;
 			break;
 		}

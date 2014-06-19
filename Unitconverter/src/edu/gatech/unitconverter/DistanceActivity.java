@@ -35,26 +35,16 @@ public class DistanceActivity extends Activity {
         
         case R.id.radioMiles:
                 if(checked && !checkedId.equals(current_checkedId))
-                    txt.setText(kmToMiles(distance));
+                    txt.setText(Numeric.kmToMiles(distance));
             		checkedId = current_checkedId;	
                 break;
         case R.id.radioKm:
                 if(checked && !checkedId.equals(current_checkedId))
-                    txt.setText(milesToKm(distance));
+                    txt.setText(Numeric.milesToKm(distance));
             		checkedId = current_checkedId;	
                 break;	
         }
     }
-		
-	public String milesToKm(double miles) {
-		double km = miles * 1.609;
-		return String.valueOf(km);
-	}
-	
-	public String kmToMiles(double km) {
-		double miles = km / 1.609;
-		return String.valueOf(miles);
-	}
 	
 
 }

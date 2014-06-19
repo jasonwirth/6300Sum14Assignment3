@@ -24,16 +24,6 @@ public class TemperatureActivity extends Activity {
 		System.out.println("Current checkedId: " + checkedId);
 	}
 
-	public String fahrenheitToCelsius(double f) {
-		double c = (f - 32) * 5 / 9;
-		return String.valueOf(c);
-	}
-	
-	public String celsiusToFahrenheit(double c) {
-		double f = (c * 9/5) + 32;
-		return String.valueOf(f);
-	}
-	
 	public void handleClick(View view){
 		boolean checked = ((RadioButton) view).isChecked();
 		
@@ -48,13 +38,13 @@ public class TemperatureActivity extends Activity {
 		
 		case R.id.radioFahrenheit:
 			if (checked && !current_checkedId.equals(checkedId))
-				txt.setText(celsiusToFahrenheit(temp));
+				txt.setText(Numeric.celsiusToFahrenheit(temp));
 				checkedId = current_checkedId;
 			break;
 			
 		case R.id.radioCelsius:
 			if (checked && !current_checkedId.equals(checkedId))
-				txt.setText(fahrenheitToCelsius(temp));
+				txt.setText(Numeric.fahrenheitToCelsius(temp));
 				checkedId = current_checkedId;
 			break;
 		}
